@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEL Expression Evaluator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/railscasts.min.css">
+    <link rel="stylesheet" href="css/feel-evaluator.css">
+</head>
+<body>
+    <div class="evaluator">
+        <h1>FEEL Expression Evaluator</h1>
+        <form id="expressionForm" onsubmit="evaluateExpression(event)">
+            <label for="expression">Expression:</label>
+            <textarea id="expression" name="expression"></textarea>
+            <label for="context">Context:</label>
+            <textarea id="context" name="context">{
+    
+}</textarea>
+            <div class="submitButton">
+                <input type="submit" value="Evaluate">
+            </div>
+            
+        </form>
+        <h2>Result</h2>
+        <textarea id="result">Click 'Evaluate' button to see the result of the expression</textarea>
+        <h2>Warnings</h2>
+        <pre id="warnings">None</pre>
+        <h2>Error</h2>
+        <pre id="error">None</pre>    
+    </div>
+    <!-- <iframe src="html/feel-evaluator.html" onload="this.before(...(this.contentWindow.document.body||this.contentWindow.document).children);this.remove()"></iframe> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+    <script src="js/feel-evaluator.js"></script>    
+
+</body>
+</html>
